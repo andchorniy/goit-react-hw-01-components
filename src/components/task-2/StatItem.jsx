@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import style from './Statistics.module.css'
 
-const StatItem = ({label, percentage}) => {
+const StatItem = ({label, percentage}) => 
     
-    return <>
+        <>
             <span className={style.label}>{label}</span>
             <span className={style.percentage}>{percentage}%</span>
         </>
-}
+
 
 StatItem.propTypes={
     label: PropTypes.string.isRequired,

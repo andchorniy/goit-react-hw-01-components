@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import FriendListItem from './FriendListItem'
+import style from './friendlist.module.css'
 
 
-const FriendList = ({friends}) =>{
-    return <div>
-            <ul className="friend-list">
+const FriendList = ({friends}) =>
+        <div>
+            <ul className={style.friendList}>
             {friends.map(({avatar, name, isOnline, id})=>{
-               return <li className="item" key={id}>
+               return <li className={style.item} key={id}>
                 <FriendListItem 
                 avatar={avatar}
                 name={name}
@@ -17,7 +18,7 @@ const FriendList = ({friends}) =>{
             })}
             </ul>
         </div>
-}
+
 
 FriendList.propTypes={
     friends: PropTypes.arrayOf(PropTypes.shape({

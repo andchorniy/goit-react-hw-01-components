@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import StatItem from './StatItem'
 import style from './Statistics.module.css'
 
-const Statistics = ({title, stats})=>{
-    return <section className={style.statistics}>
+const Statistics = ({title, stats})=>
+  <section className={style.statistics}>
     {title  && (<h2 className={style.title}>{title}</h2>)}    
     <ul className={style.list}>
       {stats.map(({id, label, percentage}) => {
@@ -18,7 +18,7 @@ const Statistics = ({title, stats})=>{
       })}
     </ul>
   </section>
-}
+
 Statistics.propTypes={
     title: PropTypes.string,
     stats: PropTypes.arrayOf(PropTypes.shape({
